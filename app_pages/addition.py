@@ -78,3 +78,5 @@ st.write(
 stocksRolling = stockData['Close'].rolling(window='14D', min_periods=1).mean()
 ax = stocksRolling.plot()
 st.pyplot(ax.figure)
+
+st.write("This concludes Exercise 18")
