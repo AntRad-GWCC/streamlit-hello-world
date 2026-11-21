@@ -26,33 +26,34 @@ st.write(
 st.write(
     """
     Displaying the first 5 rows:
-    stockData.head(5)
     """
 )
 
-stockData.set_index('Date', inplace=True)
+st.write(stockData.head(5))
 
+stockData.set_index('Date', inplace=True)
 st.write(
     """
     After reindexing Date:
-    stockData.head(5)
     """
-    )
+)
+
+st.write(stockData.head(5))
 
 fridays = pd.date_range('01/01/2020','12/31/2020', freq='W-FRI')
 stockDataFridays = stockData.reindex(fridays)
-
 st.write(
     """
     Reindexing so data only contains Fridays
-    stockDataFridays.head(5)
     """
 )
+
+st.write(stockDataFridays.head(5))
 
 st.write(
     """
     Plotting time!!
-    stockDataFridays.Close.plot()
     """
 )
 
+st.write(stockDataFridays.Close.plot())
