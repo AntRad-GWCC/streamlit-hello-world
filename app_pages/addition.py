@@ -5,6 +5,7 @@ from pathlib import Path
 
 st.write(Path.cwd())
 
+BASE_DIR = Path(__file__).resolve().parent
 files = [f.name for f in BASE_DIR.iterdir() if f.is_file()]
 
 st.write("Files in current directory:", files)
