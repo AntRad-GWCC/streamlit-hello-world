@@ -5,6 +5,10 @@ from pathlib import Path
 
 st.write(Path.cwd())
 
+files = [f.name for f in BASE_DIR.iterdir() if f.is_file()]
+
+st.write("Files in current directory:", files)
+
 #stockData = pd.read_pickle('stocks.pkl')
 
 st.write(
