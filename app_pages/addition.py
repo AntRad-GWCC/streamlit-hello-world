@@ -1,8 +1,11 @@
 import streamlit as st
 import pandas as pd
 import seaborn as sns
+from pathlib import pathlib
 
-stockData = pd.read_pickle('stocks.pkl')
+print(Path.cwd())
+
+#stockData = pd.read_pickle('stocks.pkl')
 
 st.write(
     """
@@ -17,5 +20,5 @@ st.write(
     Displaying the first 5 rows
     """
 )
-stockData.head(5)
+#stockData.head(5)
 
