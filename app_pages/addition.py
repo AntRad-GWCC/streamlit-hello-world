@@ -51,16 +51,21 @@ st.write(
 
 st.write(stockDataFridays.head(5))
 
-
-st.write("Plotting time!!")
-
-fig1, ax1 = plt.subplots()
-stockDataFridays.Close.plot(ax=ax1)
-st.pyplot(fig1)
-
-st.write("Downsampling to a monthly frequency")
+st.write(
+    """
+    Plotting time!!
+    """
+)
+ax = stockDataFridays.Close.plot()
+st.pyplot(ax.figure)
+ax.figure.clear()
 
 stockDataDown = stockData.resample(rule="ME").mean()
-fig2, ax2 = plt.subplots()
-stockDataDown.Close.plot(ax=ax2)
-st.pyplot(fig2)
+ax2 = stockDataDown.Close.plot()
+st.write(
+    """
+    Downsampling to a monthly frequency
+    """
+)
+st.pyplot(ax2.figure)
+ax2.figure.clear()
