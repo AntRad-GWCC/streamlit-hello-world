@@ -10,7 +10,7 @@ files = [f.name for f in BASE_DIR.iterdir() if f.is_file()]
 
 st.write("Files in current directory:", files)
 
-st.write("Read pkl file:")
+# Reading pickle file
 CURRENT_DIR = Path(__file__).resolve().parent
 pkl_path = CURRENT_DIR / "stocks.pkl"
 stockData = pd.read_pickle(pkl_path)
@@ -25,8 +25,34 @@ st.write(
 
 st.write(
     """
-    Displaying the first 5 rows
+    Displaying the first 5 rows:
+    stockData.head(5)
     """
 )
-st.write(stockData.head(5))
+
+stockData.set_index('Date', inplace=True)
+
+st.write(
+    """
+    After reindexing Date:
+    stockData.head(5)
+    """
+    )
+
+fridays = pd.date_range('01/01/2020','12/31/2020', freq='W-FRI')
+stockDataFridays = stockData.reindex(fridays)
+
+st.write(
+    """
+    Reindexing so data only contains Fridays
+    stockDataFridays.head(5)
+    """
+)
+
+st.write(
+    """
+    Plotting time!!
+    stockDataFridays.Close.plot()
+    """
+)
 
