@@ -4,7 +4,6 @@ import altair as alt
 
 from urllib.error import URLError
 
-st.markdown(f"# {list(page_names_to_funcs.keys())[3]}")
 st.write(
     """
     This demo shows how to use `st.write` to visualize Pandas DataFrames.
