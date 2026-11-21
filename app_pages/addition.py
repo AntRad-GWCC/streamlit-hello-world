@@ -69,3 +69,12 @@ st.write(
 )
 st.pyplot(ax2.figure)
 ax2.figure.clear()
+
+st.write(
+    """
+    Here's a rolling window for a 2 week average for the Close column
+    """
+)
+stocksRolling = stockData['Close'].rolling(window='14D', min_periods=1).mean()
+ax = stocksRolling.plot()
+st.pyplot(ax.figure)
