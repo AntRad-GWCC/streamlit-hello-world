@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 from pathlib import Path
+import matplotlib as plt
 
 st.write(Path.cwd())
 
@@ -56,4 +57,5 @@ st.write(
     """
 )
 
-st.write(stockDataFridays.Close.plot())
+ax = stockDataFridays.Close.plot()
+st.pyplot(ax.figure)
