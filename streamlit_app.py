@@ -6,6 +6,7 @@ page = st.navigation(
         st.Page("app_pages/plotting_demo.py", title="Plotting demo", icon="📈"),
         st.Page("app_pages/mapping_demo.py", title="Mapping demo", icon="🌍"),
         st.Page("app_pages/dataframe_demo.py", title="DataFrame demo", icon="📊"),
+        st.Page("app_pages/addition.py", title="Addition demo", icon="😎"),
     ]
 )
 page.run()

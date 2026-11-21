@@ -1,0 +1,21 @@
+import streamlit as st
+import pandas as pd
+import seaborn as sns
+
+stockData = pd.read_pickle('stocks.pkl')
+
+st.write(
+    """
+    This page is a pull of our Seaborn and Pandas work in Exercise 18, to demonstrate
+    the crossover between work previously completed and putting this all in 
+    a Streamlit Web Application
+    """
+)
+
+st.write(
+    """
+    Displaying the first 5 rows
+    """
+)
+stockData.head(5)
+
