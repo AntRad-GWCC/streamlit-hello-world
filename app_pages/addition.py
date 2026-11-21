@@ -10,7 +10,9 @@ files = [f.name for f in BASE_DIR.iterdir() if f.is_file()]
 
 st.write("Files in current directory:", files)
 
-stockData = pd.read_pickle('stocks.pkl')
+st.write("Read pkl file:")
+pkl_path = CURRENT_DIR / "stocks.pkl"
+stockData = pd.read_pickle(pkl_path)
 
 st.write(
     """
