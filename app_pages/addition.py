@@ -66,5 +66,6 @@ st.write(
     """
     Downsampling to a monthly frequency
     """
-    st.pyplot(ax2.figure)
 )
+
+st.pyplot(st.pyplot(ax2.figure))
