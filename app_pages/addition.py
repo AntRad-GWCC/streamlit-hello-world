@@ -10,7 +10,7 @@ files = [f.name for f in BASE_DIR.iterdir() if f.is_file()]
 
 st.write("Files in current directory:", files)
 
-#stockData = pd.read_pickle('stocks.pkl')
+stockData = pd.read_pickle('stocks.pkl')
 
 st.write(
     """
@@ -25,5 +25,5 @@ st.write(
     Displaying the first 5 rows
     """
 )
-#stockData.head(5)
+st.write(stockData.head(5))
 
