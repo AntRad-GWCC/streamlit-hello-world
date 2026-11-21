@@ -68,4 +68,4 @@ st.write(
     """
 )
 
-st.pyplot(st.pyplot(ax2.figure))
+st.pyplot(ax2.figure)
