@@ -11,6 +11,7 @@ files = [f.name for f in BASE_DIR.iterdir() if f.is_file()]
 st.write("Files in current directory:", files)
 
 st.write("Read pkl file:")
+CURRENT_DIR = Path(__file__).resolve().parent
 pkl_path = CURRENT_DIR / "stocks.pkl"
 stockData = pd.read_pickle(pkl_path)
 
