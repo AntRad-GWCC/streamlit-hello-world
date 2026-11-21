@@ -59,3 +59,12 @@ st.write(
 
 ax = stockDataFridays.Close.plot()
 st.pyplot(ax.figure)
+
+stockDataDown = stockData.resample(rule='ME').mean()
+ax2 = stockDataDown.Close.plot()
+st.write(
+    """
+    Downsampling to a monthly frequency
+    """
+    st.pyplot(ax2.figure)
+)
