@@ -3,7 +3,7 @@ import pandas as pd
 import seaborn as sns
 from pathlib import Path
 
-print(Path.cwd())
+st.write(Path.cwd())
 
 #stockData = pd.read_pickle('stocks.pkl')
 
